@@ -37,7 +37,9 @@ public class DataLoader implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     Todo todo = new Todo("Test");
+    Todo todo2 = new Todo("Test 2");
     todoRepository.save(todo);
+    todoRepository.save(todo2);
 
     TodoV2 todoV2 = new TodoV2("Test 2 for V2");
     todoV2.setId(2L);

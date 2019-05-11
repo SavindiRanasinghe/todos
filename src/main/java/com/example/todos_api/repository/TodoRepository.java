@@ -2,6 +2,8 @@ package com.example.todos_api.repository;
 
 import com.example.todos_api.model.Todo;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +16,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface TodoRepository extends CrudRepository<Todo, Long> {
+
+  @Override
+  List<Todo> findAll();
 }
